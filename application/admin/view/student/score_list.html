@@ -1,0 +1,36 @@
+<style>
+    .width10{width: 10%;}
+    .width20{width: 20%;}
+    .width30{width: 30%;}
+    .ml5{margin-left: 5%;}
+    .title{float: left; line-height: 40px; text-align: center; color:#666; font-size: 16px; font-weight: bolder;}
+    .line{width: 100%; float: left; border-bottom: 1px solid #CDCDCD; height:40px;}
+    .titles{float: left; line-height: 40px; text-align: center; color:#666; font-size: 14px; }
+    .small_title{color:#666; font-size:12px; cursor:pointer;}
+</style>
+    
+<div class="form-group" >
+    <div class="line">
+        <label class="title width10">序号</label>
+        <label class="title width10">考试名称</label>
+        <label class="title width10">语文</label>
+        <label class="title width10">数学</label>
+        <label class="title width10">英语</label>
+        <label class="title width20">荣誉</label>
+        <label class="title width20">备注</label>
+        <label class="title width10">操作</label>
+    </div>
+    <?php $status = 1; ?>
+    {volist name="result" id="vo"  }
+        <div class="line">
+            <label class="titles width10 ">{$key+1}</label>
+            <label class="titles width10">{$vo['exam_name']}</label>
+            <label class="titles width10">{$vo['chinese']}</label>
+            <label class="titles width10">{$vo['math']}</label>
+            <label class="titles width10">{$vo['english']}</label>
+            <label class="titles width20">{$vo['pride']}</label>
+            <label class="titles width20">{$vo['remark']}</label>
+            <label class="titles small_title width10" attr="{$vo['id']}">删除</label>
+        </div>
+    {/volist}
+</div>

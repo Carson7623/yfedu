@@ -1,0 +1,155 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" data-rule="required" name="row[name]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Sex')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-sex" class="form-control selectpicker" name="row[sex]">
+                {foreach name="sexList" item="vo"}
+                    <option value="{$key}" {in name="key" value="女"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('School_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-school_id"  data-source="school/index" class="form-control selectpage" name="row[school_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Grade_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-grade_id"  data-source="grade/index" class="form-control selectpage" name="row[grade_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Team_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-team_id"  data-source="team/index" class="form-control selectpage" name="row[team_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Teacher_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-teacher_id"  data-source="teacher/index" class="form-control selectpage" name="row[teacher_id]" type="text" value="">
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_interest')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-is_interest" class="form-control selectpicker" name="row[is_interest]">
+                {foreach name="isInterestList" item="vo"}
+                    <option value="{$key}" {in name="key" value="是"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Interest_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-interest_id"  data-source="interest/index" class="form-control selectpage" name="row[interest_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_late')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-is_late" class="form-control selectpicker" name="row[is_late]">
+                {foreach name="isLateList" item="vo"}
+                    <option value="{$key}" {in name="key" value="是"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_vip')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-is_vip" class="form-control selectpicker" name="row[is_vip]">
+                {foreach name="isVipList" item="vo"}
+                    <option value="{$key}" {in name="key" value="否"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('是否已交费')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-is_money" class="form-control selectpicker" name="row[is_money]">
+                {foreach name="isMoneyList" item="vo"}
+                    <option value="{$key}" {in name="key" value="否"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_meet')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-is_meet" class="form-control selectpicker" name="row[is_meet]">
+                {foreach name="isMeetList" item="vo"}
+                    <option value="{$key}" {in name="key" value="是"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group" class="meet_div">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Meet_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-meet_id"  data-source="meet/index" class="form-control selectpage" name="row[meet_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_eat')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-is_eat" class="form-control selectpicker" name="row[is_eat]">
+                {foreach name="isEatList" item="vo"}
+                    <option value="{$key}" {in name="key" value="是"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Mobile')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-mobile" class="form-control" name="row[mobile]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Contact')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-contact" class="form-control" name="row[contact]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remark" class="form-control" name="row[remark]" type="text">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
